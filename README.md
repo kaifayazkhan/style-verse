@@ -1,8 +1,44 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Style Verse
+ Elevate your wardrobe with our premium men's fashion, Style Verse offering a curated selection of stylish clothing for the modern gentleman.
 
-Currently, two official plugins are available:
+## Project Description
+A men's fashion cloting web app that is built using **React.js** and **React.js**. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Tech Stack
+
+React, TailwindCSS, ContextAPI
+
+
+## Features
+
+- Product Listing Page
+- Product Detail Page
+- Add to Cart
+- Add to Wishlist
+- Remove from Cart
+- Remove from Wishlist
+
+
+## Getting Started
+
+To install this project
+
+- Clone the repo 
+```bash
+  git clone https://github.com/kaifayazkhan/style-verse.git
+```
+- Navigate to the project directory
+```bash
+    cd style-verse
+```
+- Install the dependencies
+```bash
+    npm i
+```
+- Run the appp
+```bash
+    npm run dev
+```
+    
