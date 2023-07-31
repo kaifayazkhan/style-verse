@@ -2,9 +2,8 @@ import { useContext, useEffect } from "react";
 import {RiDeleteBin6Line} from "react-icons/ri"
 import { ProductContext } from "../context/ProductCart";
 const CartProductCard = ({ ...data }) => {
-    // console.log("Cart data", data.data);
 
-    const { product_id, product_name, image_url, description, discounted_price, quantity } = data.data;
+    const { product_id, product_name, image_url, description, discounted_price, quantity,size } = data.data;
 
     const { dispatch } = useContext(ProductContext);
 
@@ -25,7 +24,7 @@ const CartProductCard = ({ ...data }) => {
     const removeFromCart = (product_id) => {
         dispatch({
             type: "REMOVE_FROM_CART",
-            payload: product_id,
+            payload: product_id
         })
     }
 
@@ -46,6 +45,8 @@ const CartProductCard = ({ ...data }) => {
                     <h2>${discounted_price}</h2>
                 </div>
                 <p className="text-sm md:text-md ">{description}</p>
+                <p className="text-sm md:text-md ">Size : {size}</p>
+
                 <div className="flex justify-between">
                     <div className="flex gap-2 items-center">
                         <span className="bg-black text-white w-8 text-center rounded-[50%] h-8 text-xl cursor-pointer"  onClick={()=>decreaseQuantity(product_id)}>-</span>

@@ -7,7 +7,8 @@
       "price": 39.99,
       "image_url": "https://m.media-amazon.com/images/I/51FXO+LLYvL._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
-      "discounted_price": 37.99
+      "discounted_price": 37.99,
+      "sizes":["S","M","L","XL"]
     },
     {
       "product_id": "SHIRT002",
@@ -16,7 +17,8 @@
       "price": 29.99,
       "image_url": "https://m.media-amazon.com/images/I/716EBZHVNvL._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
-      "discounted_price": 24.99
+      "discounted_price": 24.99,
+      "sizes":["S","M","L","XL"]
     },
     {
       "product_id": "SHIRT003",
@@ -25,7 +27,8 @@
       "price": 49.99,
       "image_url": "https://m.media-amazon.com/images/I/81gSNwoyj5L._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
-      "discounted_price": 42.99
+      "discounted_price": 42.99,
+      "sizes":["S","M","L","XL"]
     },
     {
       "product_id": "SHIRT004",
@@ -34,7 +37,8 @@
       "price": 34.99,
       "image_url": "https://m.media-amazon.com/images/I/61gBTKeHosL._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
-      "discounted_price": 29.99
+      "discounted_price": 29.99,
+      "sizes":["S","M","L","XL"]
     },
     {
       "product_id": "SHIRT005",
@@ -43,7 +47,8 @@
       "price": 42.99,
       "image_url": "https://m.media-amazon.com/images/I/81uTb5UwUgL._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
-      "discounted_price": 39.99
+      "discounted_price": 39.99,
+      "sizes":["S","M","L","XL"]
     },
     {
       "product_id": "SHIRT006",
@@ -52,7 +57,8 @@
       "price": 27.99,
       "image_url": "https://m.media-amazon.com/images/I/81b5cEI0MJL._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
-      "discounted_price": 22.99
+      "discounted_price": 22.99,
+      "sizes":["S","M","L","XL"]
     },
     {
       "product_id": "SHIRT007",
@@ -61,7 +67,8 @@
       "price": 36.99,
       "image_url": "https://m.media-amazon.com/images/I/61QwMfrVbaL._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
-      "discounted_price": 31.99
+      "discounted_price": 31.99,
+      "sizes":["S","M","L","XL"]
     },
     {
       "product_id": "SHIRT008",
@@ -70,7 +77,8 @@
       "price": 31.99,
       "image_url": "https://m.media-amazon.com/images/I/71ssF1s7V1L._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
-      "discounted_price": 26.99
+      "discounted_price": 26.99,
+      "sizes":["S","M","L","XL"]
     },
     {
       "product_id": "SHIRT009",
@@ -79,7 +87,8 @@
       "price": 45.99,
       "image_url": "https://m.media-amazon.com/images/I/71bpk8ENR9L._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
-      "discounted_price": 39.99
+      "discounted_price": 39.99,
+      "sizes":["S","M","L","XL"]
     },
     {
       "product_id": "SHIRT010",
@@ -88,7 +97,8 @@
       "price": 23.99,
       "image_url": "https://m.media-amazon.com/images/I/71ShBw4g6GL._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
-      "discounted_price": 18.99
+      "discounted_price": 18.99,
+      "sizes":["S","M","L","XL"]
     },
     {
       "product_id": "SHIRT011",
@@ -97,7 +107,8 @@
       "price": 38.99,
       "image_url": "https://m.media-amazon.com/images/I/61j0cpBJjJS._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
-      "discounted_price": 33.99
+      "discounted_price": 33.99,
+      "sizes":["S","M","L","XL"]
     },
     {
       "product_id": "SHIRT012",
@@ -106,7 +117,8 @@
       "price": 32.99,
       "image_url": "https://m.media-amazon.com/images/I/71x2aNHhjYL._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
-      "discounted_price": 29.99
+      "discounted_price": 29.99,
+      "sizes":["S","M","L","XL"]
     },
     {
       "product_id": "SHIRT013",
@@ -115,7 +127,8 @@
       "price": 64.99,
       "image_url": "https://m.media-amazon.com/images/I/61xADFs7mbL._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
-      "discounted_price": 57.99
+      "discounted_price": 57.99,
+      "sizes":["S","M","L","XL"]
     },
     {
       "product_id": "SHIRT014",
@@ -124,7 +137,8 @@
       "price": 29.99,
       "image_url": "https://m.media-amazon.com/images/I/71NHE5uwZmL._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
-      "discounted_price": 24.99
+      "discounted_price": 24.99,
+      "sizes":["S","M","L","XL"]
     },
     {
       "product_id": "SHIRT015",
@@ -133,7 +147,8 @@
       "price": 37.99,
       "image_url": "https://m.media-amazon.com/images/I/81Ey+UJyIIL._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
-      "discounted_price": 32.99
+      "discounted_price": 32.99,
+      "sizes":["S","M","L","XL"]
     }
   ]
 }

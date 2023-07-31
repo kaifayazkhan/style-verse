@@ -12,7 +12,7 @@ const ProductPage = () => {
             await getProducts({ dispatch })
         }
         )()
-    }, [dispatch])
+    }, [dispatch])  
 
     if(products?.length<=0) return <h1>Loading...</h1>
 

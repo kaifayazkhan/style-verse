@@ -6,19 +6,12 @@ import { AiFillHeart } from "react-icons/ai";
 const WishlistCard = ({ ...data }) => {
     const { product_id, brand, product_name, discounted_price, image_url } = data.data;
 
-    const { state: { cart }, dispatch } = useContext(ProductContext);
+    const {dispatch } = useContext(ProductContext);
 
     const removeFromWishlist = (product_id) => {
         dispatch({
             type: "REMOVE_FROM_WISHLIST",
             payload: product_id
-        })
-    }
-
-    const addToCart = (product) => {
-        dispatch({
-            type: "ADD_TO_CART",
-            payload: { ...product.data, quantity: 1 }
         })
     }
 
@@ -30,13 +23,9 @@ const WishlistCard = ({ ...data }) => {
                 <div className={`${style["flex-col"]} gap-1`}>
                     <p>{brand}</p>
                     <h2 className={`${style["heading-small"]}`}>{product_name.slice(0,20)+"..."}</h2>
-                    <h2 className={`${style["heading-small"]}`}>${discounted_price}</h2>
                 </div>
                 <div className={`${style["flex-row"]} items-center`}>
-
-                    {
-                        cart?.find((item) => item.product_id === product_id) ? <Link to="/cart" className={`${style["btn-outline"]} text-green-500 z-50`}>Go to Cart</Link> : <button className={`${style["btn-outline"]} z-50`} onClick={() => addToCart(data)}>Add to Cart</button>
-                    }
+                    <h2 className={`${style["heading-small"]}`}>${discounted_price}</h2>
                     <AiFillHeart className="text-red-500 text-2xl cursor-pointer z-50" onClick={() => removeFromWishlist(product_id)} />
                 </div>
             </div>

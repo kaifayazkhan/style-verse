@@ -8,7 +8,6 @@ const SingleProduct = () => {
     const {state:{singleProduct},dispatch} = useContext(ProductContext);
 
     const { productId } = useParams();
-    // console.log(productId);
 
     useEffect(() => {
         (async () => {
@@ -17,7 +16,6 @@ const SingleProduct = () => {
         )()
     }, [dispatch, productId])
 
-    // console.log("prod",products)
 
     if(singleProduct.length<=0) return <h1>Loading...</h1>
 
