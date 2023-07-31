@@ -1,6 +1,6 @@
 
 import { useContext, useState } from "react";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { ProductContext } from "../context/ProductCart";
 import { style } from "../constant/globalStyle";
@@ -12,7 +12,7 @@ const ProductDetail = ({ ...data }) => {
     const [productSize, setProductSize] = useState("");
 
     const addToCart = () => {
-        if(!productSize){
+        if (!productSize) {
             alert("Please select a size");
             return;
         }
@@ -26,9 +26,9 @@ const ProductDetail = ({ ...data }) => {
             image_url,
             quantity: 1, //Quantity is added to the product object when any new product is added to the cart then the quantity is set to 1
             size: productSize,
-          };
-          
-          dispatch({ type: "ADD_TO_CART", payload });
+        };
+
+        dispatch({ type: "ADD_TO_CART", payload });
     }
 
     const addToWishlist = (product) => {
@@ -44,7 +44,7 @@ const ProductDetail = ({ ...data }) => {
             payload: product_id
         })
     }
- 
+
 
     return (
         <div className={`${style["flex-col"]} gap-4 md:gap-0 md:flex-row md:items-center md:justify-between w-full md:w-3/4 mx-auto`}>
@@ -63,15 +63,15 @@ const ProductDetail = ({ ...data }) => {
                 <h2 className={`${style["heading-medium"]}`}>{product_name}</h2>
                 <p>{description}</p>
 
-                <div className="flex gap-2 items-center">
+                <div className={`${style["flex-row-start"]} gap-2`}>
                     <p className={`${style["heading-xsmall"]} line-through`}>${price}</p>
                     <p className={`${style["heading-small"]}`}>${discounted_price}</p>
                 </div>
 
-                <div className="flex gap-3 items-center">
+                <div className={`${style["flex-row-start"]} gap-3`}>
                     <p className={`${style["heading-small"]}`}>Size:</p>
-                     <div className={`${style["flex-row"]} justify-start gap-3`}>
-                        {sizes?.map((size) => (<span key={size} className={`px-4 cursor-pointer py-2 border border-gray-400 rounded-md ${productSize === size && "bg-gray-400"}` }onClick={() => setProductSize(size)}>{size}</span>))}
+                    <div className={`${style["flex-row"]} justify-start gap-3`}>
+                        {sizes?.map((size) => (<span key={size} className={`px-4 cursor-pointer py-2 border border-gray-400 rounded-md ${productSize === size && "bg-gray-400"}`} onClick={() => setProductSize(size)}>{size}</span>))}
                     </div>
                 </div>
                 {

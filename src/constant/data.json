@@ -4,151 +4,236 @@
       "product_id": "SHIRT001",
       "product_name": "Classic White Dress Shirt",
       "description": "A timeless classic, this white dress shirt is perfect for any formal occasion. Made from high-quality cotton, it offers both comfort and style.",
+      "rating": 5,
       "price": 39.99,
       "image_url": "https://m.media-amazon.com/images/I/51FXO+LLYvL._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
       "discounted_price": 37.99,
-      "sizes":["S","M","L","XL"]
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
     },
     {
       "product_id": "SHIRT002",
       "product_name": "Plaid Checkered Shirt",
       "description": "Get a stylish casual look with this plaid checkered shirt. It features a button-down collar and is made from soft, breathable fabric.",
+      "rating": 4,
       "price": 29.99,
       "image_url": "https://m.media-amazon.com/images/I/716EBZHVNvL._AC_UL600_FMwebp_QL65_.jpg",
-      "brand": "FashionCove",
+      "brand": "Hanes",
       "discounted_price": 24.99,
-      "sizes":["S","M","L","XL"]
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ]
     },
     {
       "product_id": "SHIRT003",
       "product_name": "Striped Oxford Shirt",
       "description": "Look sharp and sophisticated in this striped Oxford shirt. It's perfect for business-casual settings and is crafted with attention to detail.",
+      "rating": 5,
       "price": 49.99,
       "image_url": "https://m.media-amazon.com/images/I/81gSNwoyj5L._AC_UL600_FMwebp_QL65_.jpg",
-      "brand": "FashionCove",
+      "brand": "Arrow Sports",
       "discounted_price": 42.99,
-      "sizes":["S","M","L","XL"]
+      "sizes": [
+        "S",
+        "L",
+        "XL"
+      ]
     },
     {
       "product_id": "SHIRT004",
       "product_name": "Denim Chambray Shirt",
       "description": "Add a touch of rugged style to your wardrobe with this denim chambray shirt. It's versatile and pairs well with jeans or chinos.",
+      "rating": 3,
       "price": 34.99,
       "image_url": "https://m.media-amazon.com/images/I/61gBTKeHosL._AC_UL600_FMwebp_QL65_.jpg",
-      "brand": "FashionCove",
+      "brand": "Blackberry",
       "discounted_price": 29.99,
-      "sizes":["S","M","L","XL"]
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
     },
     {
       "product_id": "SHIRT005",
       "product_name": "Crisp Linen Shirt",
       "description": "Stay cool and comfortable in this crisp linen shirt. Ideal for hot summer days, it offers a relaxed yet put-together look.",
+      "rating": 4,
       "price": 42.99,
       "image_url": "https://m.media-amazon.com/images/I/81uTb5UwUgL._AC_UL600_FMwebp_QL65_.jpg",
-      "brand": "FashionCove",
+      "brand": "Mufti",
       "discounted_price": 39.99,
-      "sizes":["S","M","L","XL"]
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ]
     },
     {
       "product_id": "SHIRT006",
       "product_name": "Printed Hawaiian Shirt",
       "description": "Get ready for a tropical vacation with this fun printed Hawaiian shirt. Its vibrant design will add a splash of color to your wardrobe.",
+      "rating": 2,
       "price": 27.99,
       "image_url": "https://m.media-amazon.com/images/I/81b5cEI0MJL._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
       "discounted_price": 22.99,
-      "sizes":["S","M","L","XL"]
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ]
     },
     {
       "product_id": "SHIRT007",
       "product_name": "Slim Fit Striped Shirt",
       "description": "Achieve a sleek and modern look with this slim fit striped shirt. It's perfect for both formal and semi-formal occasions.",
+      "rating": 4,
       "price": 36.99,
       "image_url": "https://m.media-amazon.com/images/I/61QwMfrVbaL._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
       "discounted_price": 31.99,
-      "sizes":["S","M","L","XL"]
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ]
     },
     {
       "product_id": "SHIRT008",
       "product_name": "Flannel Plaid Shirt",
       "description": "Stay warm and stylish in this cozy flannel plaid shirt. It's great for fall and winter and pairs perfectly with your favorite jeans.",
+      "rating": 4,
       "price": 31.99,
       "image_url": "https://m.media-amazon.com/images/I/71ssF1s7V1L._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
       "discounted_price": 26.99,
-      "sizes":["S","M","L","XL"]
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
     },
     {
       "product_id": "SHIRT009",
       "product_name": "Linen-Cotton Blend Shirt",
       "description": "Experience the best of both worlds with this linen-cotton blend shirt. It offers the breathability of linen and the softness of cotton.",
+      "rating": 4,
       "price": 45.99,
       "image_url": "https://m.media-amazon.com/images/I/71bpk8ENR9L._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
       "discounted_price": 39.99,
-      "sizes":["S","M","L","XL"]
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
     },
     {
       "product_id": "SHIRT010",
       "product_name": "Vintage Band T-Shirt",
       "description": "Show off your love for vintage music with this cool band t-shirt. Its retro design will make you stand out in any crowd.",
+      "rating": 4,
       "price": 23.99,
       "image_url": "https://m.media-amazon.com/images/I/71ShBw4g6GL._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
       "discounted_price": 18.99,
-      "sizes":["S","M","L","XL"]
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
     },
     {
       "product_id": "SHIRT011",
       "product_name": "Dotted Swiss Dress Shirt",
       "description": "Add a touch of elegance to your formal attire with this dotted Swiss dress shirt. Its subtle pattern adds a sophisticated flair.",
+      "rating": 4,
       "price": 38.99,
       "image_url": "https://m.media-amazon.com/images/I/61j0cpBJjJS._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
       "discounted_price": 33.99,
-      "sizes":["S","M","L","XL"]
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
     },
     {
       "product_id": "SHIRT012",
       "product_name": "Chambray Work Shirt",
       "description": "Stay comfortable and stylish at work with this chambray work shirt. Its durability and versatility make it a practical choice.",
+      "rating": 4,
       "price": 32.99,
       "image_url": "https://m.media-amazon.com/images/I/71x2aNHhjYL._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
       "discounted_price": 29.99,
-      "sizes":["S","M","L","XL"]
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
     },
     {
       "product_id": "SHIRT013",
       "product_name": "Silk Paisley Shirt",
       "description": "Indulge in luxury with this silk paisley shirt. Its intricate design and smooth texture make it a statement piece.",
+      "rating": 4,
       "price": 64.99,
       "image_url": "https://m.media-amazon.com/images/I/61xADFs7mbL._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
       "discounted_price": 57.99,
-      "sizes":["S","M","L","XL"]
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
     },
     {
       "product_id": "SHIRT014",
       "product_name": "Checked Flannel Shirt",
       "description": "Embrace a laid-back style with this checked flannel shirt. Its relaxed fit and cozy fabric make it a go-to choice for weekends.",
+      "rating": 4,
       "price": 29.99,
       "image_url": "https://m.media-amazon.com/images/I/71NHE5uwZmL._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
       "discounted_price": 24.99,
-      "sizes":["S","M","L","XL"]
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
     },
     {
       "product_id": "SHIRT015",
       "product_name": "Cotton Oxford Button-Down",
       "description": "A wardrobe essential, this cotton Oxford button-down shirt offers a classic and polished look for any occasion.",
+      "rating": 4,
       "price": 37.99,
       "image_url": "https://m.media-amazon.com/images/I/81Ey+UJyIIL._AC_UL600_FMwebp_QL65_.jpg",
       "brand": "FashionCove",
       "discounted_price": 32.99,
-      "sizes":["S","M","L","XL"]
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
     }
   ]
 }

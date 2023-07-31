@@ -15,6 +15,8 @@ const WishlistCard = ({ ...data }) => {
         })
     }
 
+    
+
     return (
         <div className={`${style["flex-col"]} p-4 w-full md:w-64 border relative items-center border-gray-300 rounded`}>
             <Link to={`/product/${product_id}`} className="absolute top-0 left-0 bottom-0 right-0" />

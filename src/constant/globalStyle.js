@@ -8,4 +8,6 @@ export const style = {
     "heading-xsmall":"text-sm md:text-md font-semibold ",
     "flex-row":"flex flex-row justify-between items-center",
     "flex-col":"flex flex-col ",
+    "flex-row-start":"flex flex-row justify-start items-center",
+    
 }
