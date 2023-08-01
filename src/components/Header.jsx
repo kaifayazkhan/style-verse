@@ -1,9 +1,9 @@
 import { useContext, useState, useEffect } from "react"
-import { Link } from "react-router-dom"
+import { Link} from "react-router-dom"
 import { AiOutlineShoppingCart, AiOutlineHeart } from "react-icons/ai"
 import { ProductContext } from "../context/ProductCart"
 const Header = () => {
-    const { state: { cart,wishlist } } = useContext(ProductContext);
+    const { state: { cart,wishlist },filterDispatch } = useContext(ProductContext);
 
     const [totalItems, setTotalItems] = useState(0);
     const [wishlistItem,setWishlistItem] = useState(0);
@@ -16,11 +16,19 @@ const Header = () => {
         setWishlistItem(wishlist.length)
     }, [cart,wishlist])
 
+    const handleSearch = (e)=>{
+        filterDispatch({
+            type:"SEARCH_BY_NAME",
+            payload:e.target.value
+        })
+    }
+
     return (
         <header className="flex justify-between px-[5%] items-center w-full bg-slate-300 h-16">
             <div className="text-3xl">
                 <Link to="/">Style Verse</Link>
             </div>
+                <input type="Search" placeholder="Search products" onChange={handleSearch} className="p-2 outline-none"/>
             <div>
                 <ul className="flex items-center gap-6 text-lg">
                     <li>

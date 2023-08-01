@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { ProductContext } from "../context/ProductCart";
 
 const useFilterProducts = () => {
-    const { state: { products }, filterState: { sort,brand,size ,rating} } = useContext(ProductContext);
+    const { state: { products }, filterState: { sort,brand,size ,rating,searchQuery} } = useContext(ProductContext);
 
     let newProduct = products;
 
@@ -21,7 +21,6 @@ const useFilterProducts = () => {
     }
 
     if(size.length>0){
-        console.log("Size",size)
         newProduct = newProduct.filter((product) => (
             product.sizes.some((item) => size.includes(item))
         ))
@@ -29,6 +28,10 @@ const useFilterProducts = () => {
 
     if(rating>0){
         newProduct = newProduct.filter((product)=>product.rating === rating)
+    }
+
+    if(searchQuery.length>0){
+        newProduct = newProduct.filter((product)=>product.product_name.toLowerCase().includes(searchQuery.toLowerCase()))
     }
 
     return newProduct;

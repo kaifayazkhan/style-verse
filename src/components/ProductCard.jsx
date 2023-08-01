@@ -1,7 +1,8 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom"
 import { AiOutlineHeart, AiFillHeart, AiOutlineStar, AiFillStar } from "react-icons/ai";
-import { useContext } from "react";
 import { ProductContext } from "../context/ProductCart";
+import { style } from "../constant/globalStyle";
 const ProductCard = ({ ...data }) => {
 
   const { product_id, brand, product_name, price, image_url, rating } = data.data;
@@ -37,9 +38,9 @@ const ProductCard = ({ ...data }) => {
       </div>
 
       <div className="mt-4 text-sm flex flex-col gap-2">
-        <p>{brand}</p>
-        <h3 className="font-bold">
-          <Link to={`/product/${product_id}`}>{product_name.slice(0, 20) + "..."}</Link>
+        <p className={`${style["heading-xsmall"]} font-normal`}>{brand}</p>
+        <h3 className="font-bold uppercase">
+          <Link to={`/product/${product_id}`}>{product_name.slice(0, 17) + "..."}</Link>
         </h3>
         <div className=" text-yellow-500 flex gap-1">
           {

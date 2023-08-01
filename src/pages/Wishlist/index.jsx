@@ -5,7 +5,7 @@ import WishlistCard from "../../components/WishlistCard"
 
 const Wishlist = ()=>{
     const {state:{wishlist}} = useContext(ProductContext);
-    console.log(wishlist)
+    // console.log(wishlist)
 
     return(
         <div className={`${style["padding-global"]} py-[5%]`}>

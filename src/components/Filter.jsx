@@ -4,11 +4,10 @@ import { style } from "../constant/globalStyle"
 import FilterBox from "./FilterBox"
 import { ProductContext } from "../context/ProductCart"
 const Filter = () => {
-    const { state: { products }, filterState: { sort, rating,brand ,size}, filterDispatch } = useContext(ProductContext);
 
+    const { state: { products }, filterState: { sort, rating, brand, size }, filterDispatch } = useContext(ProductContext);
 
     const brands = [...new Set(products.map((product) => product.brand))]
-
 
     const handleBrandChange = (e) => {
         if (e.target.checked) {
@@ -32,10 +31,10 @@ const Filter = () => {
                 payload: e.target.value
             })
         }
-        if(!e.target.checked){
+        if (!e.target.checked) {
             filterDispatch({
-                type:"REMOVE_SIZE",
-                payload:e.target.value
+                type: "REMOVE_SIZE",
+                payload: e.target.value
             })
         }
     }
@@ -56,12 +55,21 @@ const Filter = () => {
         })
     }
 
-    // console.log('si',size)
+    const clearAllFilter = () => {
+        filterDispatch({
+            type: "CLEAR_FILTER"
+        })
+    }
 
 
     return (
         <div className="bg-gray-400 w-full h-full overflow-y-auto p-3">
-            <h2 className={`${style["heading-medium"]}`}>Filter by:</h2>
+            <div className={`${style["flex-row"]} `}>
+                <h2 className={`${style["heading-medium"]}`}>Filters</h2>
+                <button className={`${style["global-btn"]} `} onClick={clearAllFilter}>
+                    Clear All
+                </button>
+            </div>
             <div className="mt-4">
                 <h3 className={`${style["heading-small"]}`}>Brand:</h3>
                 <div className="flex flex-col gap-2 mt-3">

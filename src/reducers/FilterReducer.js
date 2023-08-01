@@ -25,23 +25,30 @@ const FilterReducer = (state, action) => {
                 ...state,
                 size: [...new Set([...state.size, action.payload])]
             }
-            case "REMOVE_SIZE":
-                return{
-                    ...state,
-                    size:state.size.filter((item)=>item !== action.payload)
-                }
+        case "REMOVE_SIZE":
+            return {
+                ...state,
+                size: state.size.filter((item) => item !== action.payload)
+            }
         case "FILTER_BY_RATING":
             return {
                 ...state,
                 rating: action.payload
             }
+            case "SEARCH_BY_NAME":
+                return{
+                    ...state,
+                    searchQuery:action.payload
+                }
         case "CLEAR_FILTER":
             return {
                 ...state,
-                brand: "",
+                brand: [],
                 category: "",
                 sort: "",
-                size: ""
+                size: [],
+                rating:"",
+                searchQuery:""
             }
 
         default:

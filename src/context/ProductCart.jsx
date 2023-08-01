@@ -20,7 +20,8 @@ const ProductProvider = ({ children }) => {
         category:[],
         size:[],
         color:[],
-        rating:''
+        rating:"",
+        searchQuery:""
     });
 
     return (
