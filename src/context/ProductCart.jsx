@@ -2,7 +2,7 @@ import { createContext, useReducer } from "react";
 import { ProductReducer } from "../reducers/ProductReducer";
 import { FilterReducer } from "../reducers/FilterReducer";
 import PropTypes from "prop-types"
-import prod from "../constant/data.json";
+import prod from "../constant/products.json";
 
 const ProductContext = createContext();
 
@@ -15,12 +15,11 @@ const initialState = {
 
 const initialFilterState = {
     sort: "",
+    rating:"",
+    searchQuery:"",
     brand:[],
     category:[],
     size:[],
-    color:[],
-    rating:"",
-    searchQuery:""
 }
 const ProductProvider = ({ children }) => {
 
@@ -30,14 +29,14 @@ const ProductProvider = ({ children }) => {
     const getProducts = ()=>{
         return dispatch({
             type: "GET_PRODUCTS",
-            payload:prod.men_shirts
+            payload:prod.men_products
         })
     }
 
     const getProductById = (id) => {
         return dispatch({
             type: "GET_PRODUCT_BY_ID",
-            payload: prod.men_shirts.filter((item) => item.product_id === id)
+            payload: prod.men_products.filter((item) => item.product_id === id)
         })
     }
 

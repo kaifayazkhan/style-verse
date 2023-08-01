@@ -25,7 +25,7 @@ const ProductCard = ({ ...data }) => {
 
 
   return (
-    <div className="w-[45%] min-h-fit max-h-[330px] max-w-[240px] lg:w-[240px]  border border-gray-400 rounded-lg p-6 relative hover:scale-y-105 transition duration-200">
+    <div className="w-[45%] min-h-fit max-h-[330px] max-w-[240px] lg:w-[230px]  border border-gray-400 rounded-lg p-6 relative hover:scale-y-105 transition duration-200">
 
       <div className="absolute top-4 right-4 text-2xl cursor-pointer z-50 ">
         {
@@ -40,7 +40,7 @@ const ProductCard = ({ ...data }) => {
       <div className="mt-4 text-sm flex flex-col gap-2">
         <p className={`${style["heading-xsmall"]} font-normal`}>{brand}</p>
         <h3 className="font-bold uppercase">
-          <Link to={`/product/${product_id}`}>{product_name.slice(0, 17) + "..."}</Link>
+          <Link to={`/product/${product_id}`}>{product_name.slice(0, 15) + "..."}</Link>
         </h3>
         <div className=" text-yellow-500 flex gap-1">
           {
