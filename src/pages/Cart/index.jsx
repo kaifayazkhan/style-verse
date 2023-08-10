@@ -38,7 +38,7 @@ const Cart = () => {
                 </div>): (
                     <div className="text-center flex flex-col gap-2">
                     <h2 className="text-2xl text-center ">No Items are added in the cart</h2>
-                    <Link to="/" className="text-center text-xl underline">Go to Products</Link>
+                    <Link to="/" className="text-center text-xl underline">Add Products</Link>
                     </div>
                 )
             }

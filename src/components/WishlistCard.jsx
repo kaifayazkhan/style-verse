@@ -19,7 +19,7 @@ const WishlistCard = ({ ...data }) => {
 
     return (
         <div className={`${style["flex-col"]} p-4 w-full md:w-64 border relative items-center border-gray-300 rounded`}>
-            <Link to={`/product/${product_id}`} className="absolute top-0 left-0 bottom-0 right-0" />
+            <Link to={`/shop/${product_id}`} className="absolute top-0 left-0 bottom-0 right-0" />
             <img src={image_url} alt={product_name} className="w-24 md:w-32 h-24 md:h-32 object-contain" />
             <div className="flex flex-col gap-2 w-full mt-4">
                 <div className={`${style["flex-col"]} gap-1`}>

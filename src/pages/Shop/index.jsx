@@ -23,8 +23,9 @@ const ProductPage = () => {
     }
 
     useEffect(()=>{
-        console.log("data changed",data);
+        // console.log("data changed",data);
     },[data])
+    
     return (
         <>
             {

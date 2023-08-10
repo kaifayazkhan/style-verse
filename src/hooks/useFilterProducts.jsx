@@ -9,51 +9,52 @@ const useFilterProducts = () => {
 
   const [data, setData] = useState([]);
 
-  useEffect(()=>{
-    setData(products);
-  },[products])
   useEffect(() => {
-    const timer = setTimeout(()=>{
-        let filteredData = [...products];
-        // let filteredData = products; //this code is giving not filtering the products fully
+    setData(products);
+  }, [products])
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      let filteredData = [...products];
+      // let filteredData = products; //this code is giving not filtering the products fully
 
-    if (sort === "Low to High") {
-        filteredData = filteredData.sort((a, b) => a.discounted_price - b.discounted_price);
+      if (sort === "Low to High") {
+        filteredData = filteredData.sort((a, b) => a.price - b.price);
       } else if (sort === "High to Low") {
-        filteredData = filteredData.sort((a, b) => b.discounted_price - a.discounted_price);
+        filteredData = filteredData.sort((a, b) => b.price - a.price);
       }
 
-    if (category?.length > 0) {
-      filteredData = filteredData.filter((product) =>
-        category.includes(product.category)
-      );
-    }
+      if (category?.length > 0) {
+        filteredData = filteredData.filter((product) =>
+          category.includes(product.category)
+        );
+      }
 
-    if (brand?.length > 0) {
-      filteredData = filteredData.filter((product) => brand.includes(product.brand));
-    }
+      if (brand?.length > 0) {
+        filteredData = filteredData.filter((product) => brand.includes(product.brand));
+      }
 
-    if (size.length > 0) {
-      filteredData = filteredData.filter((product) =>
-        product.sizes.some((item) => size.includes(item))
-      );
-    }
+      if (size.length > 0) {
+        filteredData = filteredData.filter((product) =>
+          product.sizes.some((item) => size.includes(item))
+        );
+      }
 
-    if (rating > 0) {
-      filteredData = filteredData.filter((product) => product.rating === rating);
-    }
+      if (rating > 0) {
+        filteredData = filteredData.filter((product) => product.rating === rating);
+      }
 
-    if (searchQuery.length > 0) {
-      filteredData = filteredData.filter((product) =>
-        product.product_name.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-    }
+      if (searchQuery.length > 0) {
+        filteredData = filteredData.filter((product) =>
+          product.product_name.toLowerCase().includes(searchQuery.toLowerCase()) || product.brand.toLowerCase().includes(searchQuery.toLowerCase()) ||
+         ( product.brand.toLowerCase() + " "+ product.product_name.toLowerCase()).includes(searchQuery.toLowerCase())
+        );
+      }
 
-    setData(filteredData);
-    },700);
+      setData(filteredData);
+    }, 700);
 
-    return ()=>clearTimeout(timer);
-  }, [category, brand, size, rating, searchQuery, products,sort]);
+    return () => clearTimeout(timer);
+  }, [category, brand, size, rating, searchQuery, products, sort]);
 
 
   return data;

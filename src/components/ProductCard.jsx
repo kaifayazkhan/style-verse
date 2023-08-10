@@ -33,14 +33,14 @@ const ProductCard = ({ ...data }) => {
         }
       </div>
       <div className="relative">
-        <Link to={`/product/${product_id}`} className="absolute top-0 left-0 bottom-0 right-0" />
+        <Link to={`/shop/${product_id}`} className="absolute top-0 left-0 bottom-0 right-0" />
         <img src={`${image_url}`} alt={product_name} className="w-full h-22 md:h-44 object-contain" />
       </div>
 
       <div className="mt-4 text-sm flex flex-col gap-2">
         <p className={`${style["heading-xsmall"]} font-normal`}>{brand}</p>
         <h3 className="font-bold uppercase">
-          <Link to={`/product/${product_id}`}>{product_name.slice(0, 15) + "..."}</Link>
+          <Link to={`/shop/${product_id}`}>{product_name.slice(0, 15) + "..."}</Link>
         </h3>
         <div className=" text-yellow-500 flex gap-1">
           {
