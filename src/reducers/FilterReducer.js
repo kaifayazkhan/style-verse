@@ -13,8 +13,13 @@ const FilterReducer = (state, action) => {
         case "FILTER_BY_CATEGORY":
             return {
                 ...state,
-                category: action.payload
+                category: [...new Set([...state.category, action.payload])]
             }
+            case "REMOVE_CATEGORY":
+                return{
+                    ...state,
+                    category:state.category.filter((category)=>category !==action.payload)
+                }
         case "FILTER_BY_PRICE":
             return {
                 ...state,
@@ -35,7 +40,7 @@ const FilterReducer = (state, action) => {
                 ...state,
                 rating: action.payload
             }
-            case "SEARCH_BY_NAME":
+        case "SEARCH_BY_NAME":
                 return{
                     ...state,
                     searchQuery:action.payload
@@ -44,9 +49,9 @@ const FilterReducer = (state, action) => {
             return {
                 ...state,
                 brand: [],
-                category: "",
-                sort: "",
+                category: [],
                 size: [],
+                sort: "",
                 rating:"",
                 searchQuery:""
             }
