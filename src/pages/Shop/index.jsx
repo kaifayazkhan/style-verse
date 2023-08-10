@@ -5,7 +5,8 @@ import Loader from "../../components/Loader";
 import { style } from "../../constant/globalStyle";
 import { ProductContext } from "../../context/ProductCart";
 import useFilterProducts from "../../hooks/useFilterProducts";
-
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 const ProductPage = () => {
 
     const { getProducts ,state:{products}} = useContext(ProductContext);
@@ -28,6 +29,7 @@ const ProductPage = () => {
     
     return (
         <>
+        <Header search/>
             {
                 products?.length <= 0 ? <Loader /> : (
                     <div className={`${style["padding-global"]} flex flex-col md:flex-row justify-between gap-6 w-full mt-2 mb-8 md:my-8 relative`}>
@@ -47,6 +49,7 @@ const ProductPage = () => {
                     </div>
                 )
             }
+            <Footer/>
         </>
 
     )
