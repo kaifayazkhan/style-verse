@@ -71,7 +71,7 @@ const ProductDetail = ({ ...data }) => {
 
                 <div className="w-full md:w-[50%] flex flex-col gap-3 ">
                     <div className={`${style["flex-row"]}`}>
-                        <h3 className={`${style["heading-xsmall"]}`}>{brand}</h3>
+                        <span className="text-sm cursor-pointer font-bold">{brand}</span>
                         <span className="text-sm cursor-pointer font-semibold" onClick={handleModal}>Size guide</span>
                     </div>
                     <h2 className={`${style["heading-medium"]} uppercase`}>{product_name}</h2>

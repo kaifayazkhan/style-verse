@@ -3,7 +3,8 @@ import { Link } from "react-router-dom"
 import { AiOutlineShoppingCart, AiOutlineHeart } from "react-icons/ai"
 import { ProductContext } from "../context/ProductCart"
 import Logo from "../assets/style-verse-logo.png"
-const Header = () => {
+import PropTypes from "prop-types"
+const Header = ({ search }) => {
     const { state: { cart, wishlist }, filterDispatch } = useContext(ProductContext);
 
     const [totalItems, setTotalItems] = useState(0);
@@ -30,7 +31,7 @@ const Header = () => {
                 <Link to="/" className="absolute top-0 left-0 right-0 bottom-0" />
                 <img src={Logo} className="w-32 md:w-40 " />
             </div>
-            <input type="Search" placeholder="Search products" onChange={handleSearch} className="p-2 hidden md:block outline-none" />
+            {search && <input type="Search" placeholder="Search products" onChange={handleSearch} className="p-2 hidden md:block outline-none" />}
             <div>
                 <ul className="flex items-center gap-6 text-lg">
                     <li>
@@ -54,5 +55,11 @@ const Header = () => {
         </header>
     )
 }
+
+Header.propTypes = {
+    search: PropTypes.bool.isRequired,
+}
+
+
 
 export default Header
