@@ -19,7 +19,7 @@ React, TailwindCSS, ContextAPI
 - Add to Wishlist
 - Remove from Cart
 - Remove from Wishlist
-- Filter products by brand, size, price, rating and name
+- Filter products by brand, size, price, rating, and name and category
 
 
 ## Getting Started
