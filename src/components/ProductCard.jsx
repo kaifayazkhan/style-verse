@@ -25,7 +25,7 @@ const ProductCard = ({ ...data }) => {
 
 
   return (
-    <div className="w-[45%] lg:w-[230px]  relative hover:scale-y-105 transition duration-200">
+    <div className="w-[46%] lg:w-[23%]   relative">
 
       <div className="absolute top-3 right-2 text-2xl cursor-pointer z-50 ">
         {
@@ -37,7 +37,7 @@ const ProductCard = ({ ...data }) => {
         <img src={`${image_url}`} alt={product_name} className="w-full h-full max-h-full  object-contain mix-blend-multiply" />
       </div>
 
-      <div className="mt-4 text-sm flex flex-col gap-1 md:gap-2">
+      <div className="mt-4 text-sm flex flex-col gap-1 ">
         <p className={`${style["heading-xsmall"]} font-normal`}>{brand}</p>
         <h3 className={`${style["heading-small"]} uppercase`}>
           <Link to={`/shop/${product_id}`}>{product_name.slice(0, 15) + "..."}</Link>

@@ -5,6 +5,7 @@ import { ProductContext } from "../../context/ProductCart";
 import Loader from "../../components/Loader";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { style } from "../../constant/globalStyle";
 const SingleProduct = () => {
 
     const { state: { singleProduct }, getProductById } = useContext(ProductContext);
@@ -21,7 +22,7 @@ const SingleProduct = () => {
         <Header search={false}/>
             {
                 singleProduct.length <= 0 ? <Loader /> : (
-                    <div className="px-[5%] my-[5%]">
+                    <div className={`${style["padding-global"]} ${style["flex-row"]} min-h-[60dvh] my-[5%]`}>
                         <ProductDetail data={singleProduct} />
                     </div>
                 )

@@ -6,29 +6,33 @@ import { AiFillHeart } from "react-icons/ai";
 const WishlistCard = ({ ...data }) => {
     const { product_id, brand, product_name, discounted_price, image_url } = data.data;
 
-    const {dispatch } = useContext(ProductContext);
+    const { dispatch } = useContext(ProductContext);
 
-    const removeFromWishlist = (product_id) => {
+    const removeFromWishlist = (product_id) => {    
         dispatch({
             type: "REMOVE_FROM_WISHLIST",
             payload: product_id
         })
     }
 
-    
+
 
     return (
-        <div className={`${style["flex-col"]} p-4 w-full md:w-64 border relative items-center border-gray-300 rounded`}>
-            <Link to={`/shop/${product_id}`} className="absolute top-0 left-0 bottom-0 right-0" />
-            <img src={image_url} alt={product_name} className="w-24 md:w-32 h-24 md:h-32 object-contain" />
+        <div className={`${style["flex-col"]} w-[45%] md:w-[230px] relative items-center `}>
+            <div className="relative bg-gray-200 w-full h-40 md:h-44 overflow-hidden">
+                <Link to={`/shop/${product_id}`} className="absolute top-0 left-0 bottom-0 right-0 z-10" />
+                <img src={`${image_url}`} alt={product_name} className="w-full h-full max-h-full  object-contain mix-blend-multiply" />
+            </div>
             <div className="flex flex-col gap-2 w-full mt-4">
                 <div className={`${style["flex-col"]} gap-1`}>
-                    <p>{brand}</p>
-                    <h2 className={`${style["heading-small"]}`}>{product_name.slice(0,20)+"..."}</h2>
+                    <p className={`${style["heading-xsmall"]}`}>{brand}</p>
+                    <Link to={`/shop/${product_id}`}>
+                    <h2 className={`${style["heading-small"]}`}>{product_name.slice(0, 15) + "..."}</h2>
+                    </Link>
                 </div>
                 <div className={`${style["flex-row"]} items-center`}>
-                    <h2 className={`${style["heading-small"]}`}>${discounted_price}</h2>
-                    <AiFillHeart className="text-red-500 text-2xl cursor-pointer z-50" onClick={() => removeFromWishlist(product_id)} />
+                        <h2 className={`${style["heading-small"]}`}>${discounted_price}</h2>
+                        <AiFillHeart className="text-red-500 text-2xl cursor-pointer z-50" onClick={() => removeFromWishlist(product_id)} />
                 </div>
             </div>
         </div>

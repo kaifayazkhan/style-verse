@@ -58,10 +58,10 @@ const ProductDetail = ({ ...data }) => {
 
     return (
         <>
-            <div className={`${style["flex-col"]} gap-4 md:gap-0 md:flex-row md:items-center md:justify-between w-full md:w-3/4 mx-auto `}>
+            <div className={`${style["flex-col"]} gap-4 md:gap-0 md:flex-row md:items-start md:justify-between w-full md:w-3/4 mx-auto `}>
 
-                <div className="w-full md:w-[40%] bg-gray-200 pt-4 relative">
-                    <img src={image_url} alt={product_name} className="w-full h-60 md:h-72 md:max-h-80 object-contain mix-blend-darken" />
+                <div className="w-full md:w-[40%] bg-gray-200 relative">
+                    <img src={image_url} alt={product_name} className="w-full h-60 md:h-72 md:max-h-80 object-contain mix-blend-multiply" />
                     <div className="absolute top-4 right-4 text-2xl cursor-pointer">
                         {
                             state?.wishlist?.find((item) => item.product_id === product_id) ? <AiFillHeart className="text-red-500" onClick={() => removeFromWishlist(product_id)} /> : (<AiOutlineHeart className="hover:text-red-500 " onClick={() => addToWishlist(data)} />)

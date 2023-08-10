@@ -79,7 +79,7 @@ const Filter = () => {
 
 
     return (
-        <div className=" w-full h-full overflow-y-auto p-3">
+        <div className=" w-full  h-full overflow-y-auto p-3">
             <div className={`${style["flex-row"]} `}>
                 <h2 className={`${style["heading-medium"]}`}>Filters</h2>
                 <button className={`${style["global-btn"]} `} onClick={clearAllFilter}>
