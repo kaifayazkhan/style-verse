@@ -9,9 +9,9 @@ const Footer = () => {
             <div className="flex flex-col gap-5 md:flex-row justify-between  md:w-2/4">
                 <div className="flex flex-col gap-2">
                     <h3 className="font-semibold">Products</h3>
-                    <Link to="/products">All Products</Link>
-                    <Link to="/products">Trending</Link>
-                    <Link to="/products">New Arrivals</Link>
+                    <Link to="/shop">All Products</Link>
+                    <Link to="/shop">Trending</Link>
+                    <Link to="/shop">New Arrivals</Link>
                 </div>
                 <div className="flex flex-col gap-2">
                     <h3 className="font-semibold">Company</h3>

@@ -9,5 +9,6 @@ export const style = {
     "flex-row":"flex flex-row justify-between items-center",
     "flex-col":"flex flex-col ",
     "flex-row-start":"flex flex-row justify-start items-center",
+    "flex-center":"flex justify-center items-center"
     
 }
