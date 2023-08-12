@@ -3,7 +3,7 @@
  Elevate your wardrobe with our premium men's fashion, Style Verse offering a curated selection of stylish clothing for the modern gentleman.
 
 ## Project Description
-A men's fashion cloting web app that is built using **React.js** and **React.js**. 
+A men's fashion clothing web app that is built using **React.js** and **TailwindCSS**. 
 
 
 ## Tech Stack
