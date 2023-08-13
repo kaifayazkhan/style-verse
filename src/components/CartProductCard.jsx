@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react";
 import {RiDeleteBin6Line} from "react-icons/ri"
+import {toast} from "react-toastify";
 import { ProductContext } from "../context/ProductCart";
 import { style } from "../constant/globalStyle";
 const CartProductCard = ({ ...data }) => {
@@ -27,6 +28,7 @@ const CartProductCard = ({ ...data }) => {
             type: "REMOVE_FROM_CART",
             payload: product_id
         })
+        toast.success("Removed from cart!")
     }
 
     useEffect(()=>{

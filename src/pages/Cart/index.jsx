@@ -5,6 +5,7 @@ import CartProductCard from "../../components/CartProductCard";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { style } from "../../constant/globalStyle";
+import ToastNotification from "../../components/ToastNotification";
 
 const Cart = () => {
     const { state: { cart } } = useContext(ProductContext);
@@ -31,6 +32,7 @@ const Cart = () => {
     return (
         <>
             <Header search={false} />
+            <ToastNotification/>
             <div className="px-[5%] my-[5%] min-h-[50vh] flex flex-col justify-center items-center ">
                 {cart.length > 0 && <h1 className={`${style["heading-large"]} mb-6`}>My Shopping Bag ({cart.length} Items)</h1>}
                 {
@@ -57,7 +59,7 @@ const Cart = () => {
                                     <hr className="bg-[#4C4E6438] mt-4" />
                                     <div className={`${style["heading-small"]} ${style["flex-row"]} mt-2`}>
                                         <h3>Total</h3>
-                                        <h3> ${totalPrice - discount}</h3>
+                                        <h3> ${(totalPrice - discount).toFixed(2)}</h3>
                                     </div>
                                 </div>
                                 <button className="bg-black text-white flex justify-end items-end ml-auto px-4 py-1 mt-3 rounded" >Checkout</button>

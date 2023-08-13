@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-import { AiOutlineShoppingCart, AiOutlineHeart } from "react-icons/ai"
+import { AiOutlineShoppingCart, AiOutlineHeart, AiOutlineSearch } from "react-icons/ai"
 import { ProductContext } from "../context/ProductCart"
 import Logo from "../assets/style-verse-logo.png"
 import PropTypes from "prop-types"
@@ -26,12 +26,20 @@ const Header = ({ search }) => {
     }
 
     return (
-        <header className="flex justify-between px-[5%] items-center w-full bg-slate-300 h-16">
+        <header className="flex justify-between px-[5%] gap-3 py-5 md:py-4 flex-wrap md:flex-nowrap items-center w-full bg-slate-300 min-h-16">
             <div className="text-3xl relative">
                 <Link to="/" className="absolute top-0 left-0 right-0 bottom-0" />
                 <img src={Logo} className="w-32 md:w-40 " />
             </div>
-            {search && <input type="Search" placeholder="Search products" onChange={handleSearch} className="p-2 hidden md:block outline-none" />}
+            {search && <div className="order-3 w-full border-2 rounded-lg border-gray-300  bg-white max-w-full md:w-auto  md:order-none">
+                <div className="relative  mx-auto max-w-full text-gray-600  h-10 ">
+                <input className="h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none" autoComplete="off"
+                    type="text" name="search" placeholder="Search" onChange={handleSearch}/>
+                <button type="submit" className="absolute right-0 top-1/2 translate-y-[-50%]  mr-4 text-2xl">
+                    <AiOutlineSearch />
+                </button>
+            </div>
+            </div>}
             <div>
                 <ul className="flex items-center gap-6 text-lg">
                     <li>

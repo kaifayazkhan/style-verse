@@ -1,8 +1,9 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AiFillHeart } from "react-icons/ai";
+import {toast} from "react-toastify";
 import { style } from "../constant/globalStyle";
 import { ProductContext } from "../context/ProductCart";
-import { AiFillHeart } from "react-icons/ai";
 const WishlistCard = ({ ...data }) => {
     const { product_id, brand, product_name, discounted_price, image_url } = data.data;
 
@@ -13,6 +14,7 @@ const WishlistCard = ({ ...data }) => {
             type: "REMOVE_FROM_WISHLIST",
             payload: product_id
         })
+        toast.success("Removed from wishlist!")
     }
 
 

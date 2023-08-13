@@ -1,4 +1,5 @@
 import { LiaTimesSolid } from "react-icons/lia"
+import propTypes from "prop-types";
 import { style } from "../constant/globalStyle";
 const SizeModal = ({ closeModal }) => {
     return (
@@ -63,4 +64,9 @@ const SizeModal = ({ closeModal }) => {
         </div>
     )
 }
+
+SizeModal.propTypes = {
+    closeModal:propTypes.func.isRequired
+}
+
 export default SizeModal;
