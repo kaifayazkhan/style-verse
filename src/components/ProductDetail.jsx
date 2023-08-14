@@ -1,10 +1,12 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom"
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
-import { ProductContext } from "../context/ProductCart";
+import {toast} from "react-toastify"
+;import { ProductContext } from "../context/ProductCart";
 import { style } from "../constant/globalStyle";
 import SizeModal from "./SizeModal";
 import { useEffect } from "react";
+import ToastNotification from "./ToastNotification";
 const ProductDetail = ({ ...data }) => {
     const { product_id, product_name, description, price, image_url, brand, discounted_price, sizes } = data.data[0];
 
@@ -15,7 +17,7 @@ const ProductDetail = ({ ...data }) => {
 
     const addToCart = () => {
         if (!productSize) {
-            alert("Please select a size");
+            toast.warning("Please select a size!")
             return;
         }
         const payload = {
@@ -31,6 +33,7 @@ const ProductDetail = ({ ...data }) => {
         };
 
         dispatch({ type: "ADD_TO_CART", payload });
+        toast.success("Item Added to Cart!")
     }
 
     const addToWishlist = (product) => {
@@ -38,6 +41,7 @@ const ProductDetail = ({ ...data }) => {
             type: "ADD_TO_WISHLIST",
             payload: { ...product.data[0] }
         })
+        toast.success("Successfully added to wishlist")
     }
 
     const removeFromWishlist = (product_id) => {
@@ -45,6 +49,7 @@ const ProductDetail = ({ ...data }) => {
             type: "REMOVE_FROM_WISHLIST",
             payload: product_id
         })
+        toast.success("Removed from wishlist")
     }
 
     const handleModal = () => {
@@ -58,10 +63,10 @@ const ProductDetail = ({ ...data }) => {
 
     return (
         <>
-            <div className={`${style["flex-col"]} gap-4 md:gap-0 md:flex-row md:items-center md:justify-between w-full md:w-3/4 mx-auto `}>
+            <div className={`${style["flex-col"]} gap-4 md:gap-0 md:flex-row md:items-start md:justify-between w-full md:w-3/4 mx-auto `}>
 
-                <div className="w-full md:w-[40%] bg-gray-200 pt-4 relative">
-                    <img src={image_url} alt={product_name} className="w-full h-60 md:h-72 md:max-h-80 object-contain mix-blend-darken" />
+                <div className="w-full md:w-[40%] bg-gray-200 relative">
+                    <img src={image_url} alt={product_name} className="w-full h-60 md:h-72 md:max-h-80 object-contain mix-blend-multiply" />
                     <div className="absolute top-4 right-4 text-2xl cursor-pointer">
                         {
                             state?.wishlist?.find((item) => item.product_id === product_id) ? <AiFillHeart className="text-red-500" onClick={() => removeFromWishlist(product_id)} /> : (<AiOutlineHeart className="hover:text-red-500 " onClick={() => addToWishlist(data)} />)
@@ -95,9 +100,11 @@ const ProductDetail = ({ ...data }) => {
 
                 </div>
 
+                <ToastNotification/>
+
             </div>
             {
-                openModal && <div className="absolute left-0 top-0 right-0 bottom-0  bg-[#0009] backdrop-blur-sm  flex justify-center items-center p-[5%]">
+                openModal && <div className="fixed left-0 top-0 right-0 bottom-0  bg-[#0009] backdrop-blur-sm  flex justify-center items-center p-[5%]">
                     <SizeModal closeModal={handleModal} />
                 </div>
             }

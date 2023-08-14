@@ -1,9 +1,11 @@
 import { useContext, useEffect } from "react";
 import {RiDeleteBin6Line} from "react-icons/ri"
+import {toast} from "react-toastify";
 import { ProductContext } from "../context/ProductCart";
+import { style } from "../constant/globalStyle";
 const CartProductCard = ({ ...data }) => {
 
-    const { product_id, product_name, image_url, description, discounted_price, quantity,size } = data.data;
+    const { product_id, product_name, image_url, description, price, quantity,size } = data.data;
 
     const { dispatch } = useContext(ProductContext);
 
@@ -26,26 +28,29 @@ const CartProductCard = ({ ...data }) => {
             type: "REMOVE_FROM_CART",
             payload: product_id
         })
+        toast.success("Removed from cart!")
     }
 
     useEffect(()=>{
         if(quantity===0){
             removeFromCart(product_id)
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[quantity])
 
 
 
     return (
-        <div className="flex gap-5 p-4 rounded shadow-lg w-full bg-white shadow-slate-200">
+        <div className="flex gap-5 p-4  w-full bg-white ">
+        {/* <div className="flex gap-5 p-4 rounded shadow-lg w-full bg-white shadow-slate-200"> */}
             <img src={image_url} alt={product_name} className="w-24 md:w-32 h-24 md:h-32 object-contain" />
             <div className="flex flex-col gap-2 w-full">
-                <div className="flex justify-between text-md md:text-xl font-semibold md:font-bold">
-                    <h2>{product_name}</h2>
-                    <h2>${discounted_price}</h2>
+                <div className="flex justify-between ">
+                    <h2 className={`${style["heading-small"]}`}>{product_name}</h2>
+                    <h2 className={`${style["heading-small"]}`}>${price}</h2>
                 </div>
-                <p className="text-sm md:text-md ">{description}</p>
-                <p className="text-sm md:text-md ">Size : {size}</p>
+                <p className="text-[12px] md:text-sm">{description.slice(0,50)}...</p>
+                <p className="text-[12px] md:text-sm ">Size : {size}</p>
 
                 <div className="flex justify-between">
                     <div className="flex gap-2 items-center">

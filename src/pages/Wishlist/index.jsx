@@ -5,6 +5,7 @@ import { ProductContext } from "../../context/ProductCart"
 import WishlistCard from "../../components/WishlistCard"
 import Header from "../../components/Header"
 import Footer from "../../components/Footer"
+import ToastNotification from "../../components/ToastNotification"
 
 
 const Wishlist = () => {
@@ -13,9 +14,10 @@ const Wishlist = () => {
     return (
         <>
             <Header search={false}/>
+            <ToastNotification/>
             <div className={`${style["padding-global"]} py-[5%] min-h-[70dvh]`}>
                 {wishlist.length > 0 && <h1 className={`${style["heading-large"]} text-center `}>Your Wishlist</h1>}
-                <div className={`${style["flex-col"]} md:flex-row mt-8 gap-4`}>
+                <div className={`flex flex-wrap mt-8 gap-5 md:gap-6`}>
                     {
                         wishlist?.map((product) => (
                             <WishlistCard key={product.product_id} data={product} />
