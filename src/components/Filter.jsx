@@ -136,12 +136,12 @@ const Filter = ({ handleClose }) => {
                     </div>
                 </div>
             </div>
-            <div className={`${style["flex-row"]} absolute bottom-0 w-full p-4 bg-white `}>
+            <div className={`${style["flex-row"]} absolute  lg:hidden bottom-0 w-full p-4 bg-white `}>
                 <button className={`${style["btn-outline"]}  lg:hidden`} onClick={handleClose}>
                     CLOSE
                 </button>
                 <div className="w-[1px] h-6 visible bg-[#4C4E6438] lg:hidden"></div>
-                <button className={`${style["global-btn"]} lg:w-full`} onClick={clearAllFilter}>
+                <button className={`${style["global-btn"]} lg:hidden`} onClick={handleClose}>
                     APPLY
                 </button>
             </div>
