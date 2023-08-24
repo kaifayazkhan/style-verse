@@ -41,7 +41,7 @@ const ProductPage = () => {
           className={`${style["padding-global"]} flex flex-col lg:flex-row justify-between gap-6 w-full mt-2 mb-8 md:my-8 relative`}
         >
           <div
-            className={`bg-gray-300 w-full  lg:w-[300px] left-0  fixed z-[100]   ${
+            className={`border bg-white  w-full  lg:w-[300px] left-0  fixed z-[100]   ${
               showFilter ? "top-0 bottom-0" : "top-[100%]"
             } transition-all duration-300 lg:sticky lg:top-2 lg:max-h-screen`}
           >
@@ -63,7 +63,7 @@ const ProductPage = () => {
             ) : (
               <div className="flex justify-center items-center  mx-auto text-center min-h-[60dvh]">
                 <h2 className={`${style["heading-medium"]}`}>
-                  No products matches your preferences
+                We could't find any matches!
                 </h2>
               </div>
             )}

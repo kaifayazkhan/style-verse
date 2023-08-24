@@ -103,7 +103,7 @@ const Filter = ({ handleClose }) => {
                     <div className="flex flex-col gap-2 mt-3">
                         {
                             brands.map((item) => (
-                                <FilterBox key={item} type="checkbox" check={brand.includes(item)} title={item} onChange={handleBrandChange} />
+                                <FilterBox key={item} type="checkbox"  check={brand.includes(item)} title={item} onChange={handleBrandChange} />
                             ))
                         }
                     </div>

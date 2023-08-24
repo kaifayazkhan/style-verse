@@ -5,6 +5,7 @@ import Shop from "../pages/Shop";
 import SingleProduct from "../pages/SingleProduct";
 import Cart from "../pages/Cart";
 import Wishlist from "../pages/Wishlist";
+import {SignIn,SignUp} from "../pages/Auth";
 
 const AppRouter = () => {
     return (
@@ -15,6 +16,8 @@ const AppRouter = () => {
             <Route path="/shop/:productId" element={<SingleProduct />} />
             <Route path="/wishlist" element={<Wishlist />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/signin" element={<SignIn/>}/>
+            <Route path="/signup" element={<SignUp/>}/>
         </Routes>
         </Router>
     );

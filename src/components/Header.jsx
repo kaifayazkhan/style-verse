@@ -26,7 +26,7 @@ const Header = ({ search }) => {
     }
 
     return (
-        <header className="flex justify-between px-[5%] gap-3 py-5 md:py-4 flex-wrap md:flex-nowrap items-center w-full bg-slate-300 min-h-16">
+        <header className="flex justify-between px-[5%] gap-3 py-5 md:py-4 flex-wrap md:flex-nowrap items-center w-full  bg-[#F3F4F6] min-h-16">
             <div className="text-3xl relative">
                 <Link to="/" className="absolute top-0 left-0 right-0 bottom-0" />
                 <img src={Logo} className="w-32 md:w-40 " />
