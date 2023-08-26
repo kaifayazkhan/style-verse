@@ -7,7 +7,6 @@ import { ProductContext } from "../../context/ProductCart";
 import useFilterProducts from "../../hooks/useFilterProducts";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import ToastNotification from "../../components/ToastNotification";
 const ProductPage = () => {
   const {
     getProducts,
@@ -33,7 +32,6 @@ const ProductPage = () => {
   return (
     <>
       <Header search />
-      <ToastNotification />
       {products?.length <= 0 ? (
         <Loader />
       ) : (
@@ -63,7 +61,7 @@ const ProductPage = () => {
             ) : (
               <div className="flex justify-center items-center  mx-auto text-center min-h-[60dvh]">
                 <h2 className={`${style["heading-medium"]}`}>
-                We could't find any matches!
+                We could&apos;t find any matches!
                 </h2>
               </div>
             )}

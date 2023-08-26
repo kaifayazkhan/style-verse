@@ -5,7 +5,6 @@ import CartProductCard from "../../components/CartProductCard";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { style } from "../../constant/globalStyle";
-import ToastNotification from "../../components/ToastNotification";
 
 const Cart = () => {
     const { state: { cart } } = useContext(ProductContext);
@@ -32,7 +31,6 @@ const Cart = () => {
     return (
         <>
             <Header search={false} />
-            <ToastNotification/>
             <div className="px-[5%] my-[5%] min-h-[50vh] flex flex-col justify-center items-center ">
                 {cart.length > 0 && <h1 className={`${style["heading-large"]} mb-6`}>My Shopping Bag ({cart.length} Items)</h1>}
                 {

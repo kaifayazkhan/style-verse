@@ -3,7 +3,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const ToastNotification = () => {
     return (
-        <div >
             <ToastContainer
                 position="top-right"
                 autoClose={5000}
@@ -17,7 +16,6 @@ const ToastNotification = () => {
                 theme="light"
                 className="text-sm  mx-auto md:mt-16"
             />
-        </div>
     );
 }
 

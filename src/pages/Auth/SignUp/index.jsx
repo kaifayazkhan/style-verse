@@ -5,6 +5,7 @@ import Input from "../../../components/Input";
 import Logo from "../../../assets/style-verse-logo.png";
 import { ValidateSigUpForm } from "../../../vallidateForm";
 import {signUpField} from "../../../constant"
+import useAuth from "../../../hooks/useAuth";
 const SignUp = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -13,6 +14,7 @@ const SignUp = () => {
     confirmPassword: "",
   });
   const [errorMsg, setErrorMsg] = useState({});
+  const {createUser,loading} = useAuth();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,6 +26,10 @@ const SignUp = () => {
     const { name,email, password,confirmPassword } = formData;
     const error = ValidateSigUpForm(name,email, password,confirmPassword);
     setErrorMsg(error);
+
+    if(Object.keys(error).length === 0){
+      createUser(name,email,password);
+    }
   };
 
   return (
@@ -46,7 +52,9 @@ const SignUp = () => {
             error={errorMsg[id]}
           />
         ))}
-        <button className={`${style["global-btn"]}`}>Submit</button>
+        <button className={`${style["global-btn"]}`}>
+          {loading ?"Loading..." :"Submit"}
+        </button>
         <Link
           to="/signin"
           className="text-center hover:underline underline-offset-4 transition duration-100"

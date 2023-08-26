@@ -1,4 +1,4 @@
-import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
+import {Routes,Route } from "react-router-dom";
 
 import Home from "../pages/index"
 import Shop from "../pages/Shop";
@@ -9,7 +9,6 @@ import {SignIn,SignUp} from "../pages/Auth";
 
 const AppRouter = () => {
     return (
-        <Router>
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
@@ -19,7 +18,6 @@ const AppRouter = () => {
             <Route path="/signin" element={<SignIn/>}/>
             <Route path="/signup" element={<SignUp/>}/>
         </Routes>
-        </Router>
     );
     }
 

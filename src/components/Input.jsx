@@ -14,7 +14,7 @@ Input.propTypes = {
   title: propTypes.string.isRequired,
   type: propTypes.string.isRequired,
   onChange:propTypes.func.isRequired,
-  error:propTypes.string.isRequired,
+  error:propTypes.string,
   name:propTypes.string.isRequired,
   value:propTypes.string.isRequired
 };

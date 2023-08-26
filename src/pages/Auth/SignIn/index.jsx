@@ -5,14 +5,18 @@ import Input from "../../../components/Input";
 import Logo from "../../../assets/style-verse-logo.png";
 import { ValidateSigInForm } from "../../../vallidateForm";
 import { loginField } from "../../../constant";
+import useAuth from "../../../hooks/useAuth";
 
 const SignIn = () => {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
   });
-  
+
   const [errorMsg, setErrorMsg] = useState({});
+
+  const { signIn,loading } = useAuth();
+  // console.log(signIn)
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,6 +28,10 @@ const SignIn = () => {
     const { username, password } = formData;
     const error = ValidateSigInForm(username, password);
     setErrorMsg(error);
+
+    if (Object.keys(error).length === 0) {
+      signIn(username, password);
+    }
   };
 
   return (
@@ -47,7 +55,8 @@ const SignIn = () => {
           />
         ))}
         <button className={`${style["global-btn"]}`} type="submit">
-          Login
+          {!loading &&"Login"}
+          {loading && "Loading..."}
         </button>
         <Link
           to="/signup"
