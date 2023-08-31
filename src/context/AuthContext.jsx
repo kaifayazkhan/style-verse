@@ -43,6 +43,8 @@ const AuthProvider = ({ children }) => {
       if (error.message === "Firebase: Error (auth/email-already-in-use).") {
         toast.warning("Email already exists.");
       }
+    }finally{
+      setLoading(false);
     }
   };
   const signIn = async (email, password) => {

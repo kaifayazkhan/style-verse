@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import { ProductContext } from "../context/ProductCart";
 import { style } from "../constant/globalStyle";
 import SizeModal from "./SizeModal";
-import { useEffect } from "react";
+import useToken from "../hooks/useToken";
 const ProductDetail = ({ ...data }) => {
   const {
     product_id,
@@ -19,11 +19,16 @@ const ProductDetail = ({ ...data }) => {
   } = data.data[0];
 
   const { state, dispatch } = useContext(ProductContext);
+  const {token}  = useToken();
 
   const [productSize, setProductSize] = useState("");
   const [openModal, setOpenModal] = useState(false);
 
   const addToCart = () => {
+    if(!token){
+      toast.warning("Please login first to add the item to cart.");
+      return;
+    }
     if (!productSize) {
       toast.warning("Please select a size!");
       return;
@@ -45,6 +50,10 @@ const ProductDetail = ({ ...data }) => {
   };
 
   const addToWishlist = (product) => {
+    if(!token){
+      toast.warning("Please login first to add the item to wishlist.");
+      return;
+    }
     dispatch({
       type: "ADD_TO_WISHLIST",
       payload: { ...product.data[0] },

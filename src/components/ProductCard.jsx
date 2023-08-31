@@ -1,21 +1,28 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import {toast} from "react-toastify";
 import {
   AiOutlineHeart,
   AiFillHeart,
   AiOutlineStar,
   AiFillStar,
 } from "react-icons/ai";
-import { toast } from "react-toastify";
 import { ProductContext } from "../context/ProductCart";
 import { style } from "../constant/globalStyle";
+
+import useToken from "../hooks/useToken";
 const ProductCard = ({ ...data }) => {
   const { product_id, brand, product_name, price, image_url, rating } =
     data.data;
 
   const { state, dispatch } = useContext(ProductContext);
+  const {token}  = useToken();
 
   const addToWishlist = (product) => {
+    if(!token){
+      toast.warning("Please login to add the item to wishlist.");
+      return;
+    }
     dispatch({
       type: "ADD_TO_WISHLIST",
       payload: { ...product.data },
