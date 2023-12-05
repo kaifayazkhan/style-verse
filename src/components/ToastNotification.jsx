@@ -3,10 +3,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const ToastNotification = () => {
     return (
-        <div >
             <ToastContainer
                 position="top-right"
-                autoClose={5000}
+                autoClose={2000}
                 hideProgressBar={false}
                 newestOnTop={true}
                 closeOnClick
@@ -15,9 +14,8 @@ const ToastNotification = () => {
                 draggable
                 pauseOnHover
                 theme="light"
-                className="text-sm  mx-auto md:mt-16"
+                className="text-sm  mx-auto md:mt-4"
             />
-        </div>
     );
 }
 

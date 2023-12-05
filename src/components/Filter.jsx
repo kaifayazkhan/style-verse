@@ -1,8 +1,8 @@
 import { useContext } from "react"
 import { AiOutlineStar, AiFillStar } from "react-icons/ai"
-import { style } from "../constant/globalStyle"
+import { style } from "src/constant/globalStyle"
 import FilterBox from "./FilterBox"
-import { ProductContext } from "../context/ProductCart"
+import { ProductContext } from "src/context/ProductCart"
 import propType from "prop-types"
 const Filter = ({ handleClose }) => {
 
@@ -103,7 +103,7 @@ const Filter = ({ handleClose }) => {
                     <div className="flex flex-col gap-2 mt-3">
                         {
                             brands.map((item) => (
-                                <FilterBox key={item} type="checkbox" check={brand.includes(item)} title={item} onChange={handleBrandChange} />
+                                <FilterBox key={item} type="checkbox"  check={brand.includes(item)} title={item} onChange={handleBrandChange} />
                             ))
                         }
                     </div>

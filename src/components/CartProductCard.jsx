@@ -1,8 +1,8 @@
 import { useContext, useEffect } from "react";
 import {RiDeleteBin6Line} from "react-icons/ri"
 import {toast} from "react-toastify";
-import { ProductContext } from "../context/ProductCart";
-import { style } from "../constant/globalStyle";
+import { ProductContext } from "src/context/ProductCart";
+import { style } from "src/constant/globalStyle";
 const CartProductCard = ({ ...data }) => {
 
     const { product_id, product_name, image_url, description, price, quantity,size } = data.data;

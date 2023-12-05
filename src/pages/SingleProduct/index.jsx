@@ -19,15 +19,15 @@ const SingleProduct = () => {
 
     return (
         <>
-        <Header search={false}/>
+            <Header search={false} />
             {
                 singleProduct.length <= 0 ? <Loader /> : (
-                    <div className={`${style["padding-global"]} ${style["flex-row"]} min-h-[60dvh] my-[5%]`}>
+                    <div className={`${style["padding-global"]} ${style["flex-row"]} justify-between min-h-[60dvh] my-[5%]`}>
                         <ProductDetail data={singleProduct} />
                     </div>
                 )
             }
-            <Footer/>
+            <Footer />
         </>
     )
 }
