@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
+  sendEmailVerification,
 } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { auth, db } from "../firebase";
@@ -34,11 +35,15 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     try {
       const user = await createUserWithEmailAndPassword(auth, email, password);
-      //   console.log(user);
       addToken(user?.user?.accessToken);
       saveUser(user?.user?.uid, name, email);
-      toast.success("User created successfully!");
-      navigate("/shop");
+      const userCred = user.user;
+      if (userCred) {
+        sendEmailVerification(userCred); //send the email verification link on user email
+        toast.success("Email verification link has been sent to your email.")
+        toast.success("User created successfully!");
+      }
+      navigate("/signIn");
     } catch (error) {
       if (error.message === "Firebase: Error (auth/email-already-in-use).") {
         toast.warning("Email already exists.");
@@ -51,9 +56,14 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     try {
       const user = await signInWithEmailAndPassword(auth, email, password);
-      //   console.log(user.user, "Logged In");
+      const userCred = user.user;
+      if (!userCred) return;
+      if (!userCred.emailVerified) {
+        toast.warning("Please verify your email first.");
+        return;
+      }
       addToken(user?.user?.accessToken);
-      navigate("/cart");
+      navigate("/shop");
     } catch (error) {
       console.log(error);
       if (error.message === "Firebase: Error (auth/user-not-found).") {
@@ -69,6 +79,7 @@ const AuthProvider = ({ children }) => {
 
   const signOut = () => {
     removeToken();
+    navigate("/")
   };
 
   const values = {

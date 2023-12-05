@@ -12,7 +12,7 @@ const Wishlist = () => {
 
     return (
         <>
-            <Header search={false}/>
+            <Header search={false} />
             <div className={`${style["padding-global"]} py-[5%] min-h-[70dvh]`}>
                 {wishlist.length > 0 && <h1 className={`${style["heading-large"]} text-center `}>Your Wishlist</h1>}
                 <div className={`flex flex-wrap mt-8 gap-5 md:gap-6`}>

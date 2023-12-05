@@ -97,7 +97,7 @@ const Header = ({ search }) => {
                 Logout
               </button>
             ) : (
-              <button className={`${style["btn-outline"]}`}>Login</button>
+              <Link to="/signIn" className={`${style["btn-outline"]}`}>Login</Link>
             )}
           </li>
         </ul>

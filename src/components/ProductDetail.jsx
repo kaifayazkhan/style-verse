@@ -19,13 +19,13 @@ const ProductDetail = ({ ...data }) => {
   } = data.data[0];
 
   const { state, dispatch } = useContext(ProductContext);
-  const {token}  = useToken();
+  const { token } = useToken();
 
   const [productSize, setProductSize] = useState("");
   const [openModal, setOpenModal] = useState(false);
 
   const addToCart = () => {
-    if(!token){
+    if (!token) {
       toast.warning("Please login first to add the item to cart.");
       return;
     }
@@ -50,7 +50,7 @@ const ProductDetail = ({ ...data }) => {
   };
 
   const addToWishlist = (product) => {
-    if(!token){
+    if (!token) {
       toast.warning("Please login first to add the item to wishlist.");
       return;
     }
@@ -74,7 +74,7 @@ const ProductDetail = ({ ...data }) => {
   };
 
   return (
-    <>
+    <div className="flex flex-col justify-between h-full">
       <div
         className={`${style["flex-col"]} gap-4 md:gap-0 md:flex-row md:items-start md:justify-between w-full md:w-3/4 mx-auto `}
       >
@@ -127,9 +127,8 @@ const ProductDetail = ({ ...data }) => {
               {sizes?.map((size) => (
                 <span
                   key={size}
-                  className={`px-4 cursor-pointer py-2 border border-gray-400 rounded-md text-sm ${
-                    productSize === size && "bg-gray-400"
-                  }`}
+                  className={`px-4 cursor-pointer py-2 border border-gray-400 rounded-md text-sm ${productSize === size && "bg-gray-400"
+                    }`}
                   onClick={() => setProductSize(size)}
                 >
                   {size}
@@ -157,7 +156,7 @@ const ProductDetail = ({ ...data }) => {
           <SizeModal closeModal={handleModal} />
         </div>
       )}
-    </>
+    </div>
   );
 };
 
