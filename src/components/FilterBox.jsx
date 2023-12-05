@@ -1,4 +1,4 @@
-import { style } from "../constant/globalStyle"
+import { style } from "src/constant/globalStyle"
 import PropTypes from "prop-types";
 
 const FilterBox = ({type,title,onChange,check}) => {

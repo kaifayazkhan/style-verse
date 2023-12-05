@@ -1,4 +1,4 @@
-import { style } from "../constant/globalStyle"
+import { style } from "src/constant/globalStyle"
 const Loader = () => {
   return (
     <div className={`${style["flex-row-start"]} justify-center gap-5 w-full min-h-[70vh] `}>

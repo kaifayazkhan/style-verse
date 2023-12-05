@@ -2,10 +2,10 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { toast } from "react-toastify";
-import { ProductContext } from "../context/ProductCart";
-import { style } from "../constant/globalStyle";
+import { ProductContext } from "src/context/ProductCart";
+import { style } from "src/constant/globalStyle";
 import SizeModal from "./SizeModal";
-import useToken from "../hooks/useToken";
+import useToken from "src/hooks/useToken";
 const ProductDetail = ({ ...data }) => {
   const {
     product_id,

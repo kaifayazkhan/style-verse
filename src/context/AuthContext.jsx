@@ -14,7 +14,7 @@ export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
-  const { addToken } = useToken();
+  const { addToken, removeToken } = useToken();
   const navigate = useNavigate();
 
   const saveUser = async (uid, name, email) => {
@@ -43,7 +43,7 @@ const AuthProvider = ({ children }) => {
       if (error.message === "Firebase: Error (auth/email-already-in-use).") {
         toast.warning("Email already exists.");
       }
-    }finally{
+    } finally {
       setLoading(false);
     }
   };
@@ -55,22 +55,27 @@ const AuthProvider = ({ children }) => {
       addToken(user?.user?.accessToken);
       navigate("/cart");
     } catch (error) {
-        console.log(error); 
+      console.log(error);
       if (error.message === "Firebase: Error (auth/user-not-found).") {
         toast.warning("Invalid email or password");
       }
-      if(error.message=== "Firebase: Error (auth/wrong-password)."){
-        toast.warning("Invalid password.")
+      if (error.message === "Firebase: Error (auth/wrong-password).") {
+        toast.warning("Invalid password.");
       }
     } finally {
       setLoading(false);
     }
   };
 
+  const signOut = () => {
+    removeToken();
+  };
+
   const values = {
     signIn,
     createUser,
     loading,
+    signOut,
   };
   return <AuthContext.Provider value={values}>{children}</AuthContext.Provider>;
 };

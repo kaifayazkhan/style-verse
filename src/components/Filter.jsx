@@ -1,8 +1,8 @@
 import { useContext } from "react"
 import { AiOutlineStar, AiFillStar } from "react-icons/ai"
-import { style } from "../constant/globalStyle"
+import { style } from "src/constant/globalStyle"
 import FilterBox from "./FilterBox"
-import { ProductContext } from "../context/ProductCart"
+import { ProductContext } from "src/context/ProductCart"
 import propType from "prop-types"
 const Filter = ({ handleClose }) => {
 

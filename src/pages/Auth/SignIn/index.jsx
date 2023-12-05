@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { style } from "../../../constant/globalStyle";
-import Input from "../../../components/Input";
-import Logo from "../../../assets/style-verse-logo.png";
-import { ValidateSigInForm } from "../../../vallidateForm";
-import { loginField } from "../../../constant";
-import useAuth from "../../../hooks/useAuth";
+import { style } from "src/constant/globalStyle";
+import Input from "src/components/Input";
+import Logo from "src/assets/style-verse-logo.png";
+import { ValidateSigInForm } from "src/vallidateForm";
+import { loginField } from "src/constant";
+import useAuth from "src/hooks/useAuth";
 
 const SignIn = () => {
   const [formData, setFormData] = useState({
@@ -15,8 +15,7 @@ const SignIn = () => {
 
   const [errorMsg, setErrorMsg] = useState({});
 
-  const { signIn,loading } = useAuth();
-  // console.log(signIn)
+  const { signIn, loading } = useAuth();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -55,7 +54,7 @@ const SignIn = () => {
           />
         ))}
         <button className={`${style["global-btn"]}`} type="submit">
-          {!loading &&"Login"}
+          {!loading && "Login"}
           {loading && "Loading..."}
         </button>
         <Link
