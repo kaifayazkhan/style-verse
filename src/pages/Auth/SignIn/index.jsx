@@ -9,8 +9,8 @@ import useAuth from "src/hooks/useAuth";
 
 const SignIn = () => {
   const [formData, setFormData] = useState({
-    username: "",
-    password: "",
+    username: "kaifayazkhan@gmail.com",
+    password: "Kaif1234",
   });
 
   const [errorMsg, setErrorMsg] = useState({});

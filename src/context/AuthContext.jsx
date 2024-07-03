@@ -25,7 +25,6 @@ const AuthProvider = ({ children }) => {
         email: email,
         createdAt: new Date().toDateString(),
       });
-      console.log("Document written");
     } catch (e) {
       console.error("Error adding document: ", e);
     }
